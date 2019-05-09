@@ -92,7 +92,7 @@ describe 'new work package', js: true do
       create_method.call(type_bug, project.name)
       expect(page).to have_selector(safeguard_selector, wait: 10)
 
-      type_field.expect_state_text type_bug.name
+      type_field.expect_state_text type_bug.name.upcase
     end
 
     it 'saves the work package with enter' do
